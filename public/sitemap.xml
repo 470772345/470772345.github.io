@@ -3,29 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ohohhh.github.io/</loc>
-    <lastmod>2020-05-12T00:14:56+08:00</lastmod>
+    <loc>https://470772345.github.io/</loc>
+    <lastmod>2020-05-12T00:24:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ohohhh.github.io/post/my_first_blog/</loc>
-    <lastmod>2020-05-12T00:14:56+08:00</lastmod>
+    <loc>https://470772345.github.io/post/newblog/</loc>
+    <lastmod>2020-05-12T00:24:31+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ohohhh.github.io/post/</loc>
-    <lastmod>2020-05-12T00:14:56+08:00</lastmod>
+    <loc>https://470772345.github.io/post/</loc>
+    <lastmod>2020-05-12T00:24:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ohohhh.github.io/tags/</loc>
+    <loc>https://470772345.github.io/post/my_first_blog/</loc>
+    <lastmod>2020-05-12T00:14:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://470772345.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ohohhh.github.io/topics/</loc>
+    <loc>https://470772345.github.io/topics/</loc>
     <priority>0</priority>
   </url>
   

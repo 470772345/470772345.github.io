@@ -2,22 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 470772345&#39;s blog</title>
-    <link>https://ohohhh.github.io/post/</link>
+    <link>https://470772345.github.io/post/</link>
     <description>Recent content in Posts on 470772345&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 12 May 2020 00:14:56 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2020 00:24:31 +0800</lastBuildDate>
     
-	<atom:link href="https://ohohhh.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://470772345.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>NewBlog</title>
+      <link>https://470772345.github.io/post/newblog/</link>
+      <pubDate>Tue, 12 May 2020 00:24:31 +0800</pubDate>
+      
+      <guid>https://470772345.github.io/post/newblog/</guid>
+      <description>第二个bolg 第二个</description>
+    </item>
+    
+    <item>
       <title>My_first_blog</title>
-      <link>https://ohohhh.github.io/post/my_first_blog/</link>
+      <link>https://470772345.github.io/post/my_first_blog/</link>
       <pubDate>Tue, 12 May 2020 00:14:56 +0800</pubDate>
       
-      <guid>https://ohohhh.github.io/post/my_first_blog/</guid>
+      <guid>https://470772345.github.io/post/my_first_blog/</guid>
       <description>你好世界 你好 前端仔</description>
     </item>
     

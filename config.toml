@@ -1,0 +1,67 @@
+baseURL = "https://470772345.github.io/"
+LanguageCode = "zh-CN"
+HasCJKLanguage = true
+title = "470772345's blog"
+theme = "blackburn"
+author = "470772345"
+copyright = "&copy; 2016. All rights reserved."
+canonifyurls = true
+paginate = 10
+
+[indexes]
+  tag = "tags"
+  topic = "topics"
+
+[params]
+  BottomIntroduce = "470772345's Blog"
+  # Shown in the home page
+  subtitle = "好好学习 天天向上"
+  brand = "Menu"
+  googleAnalytics = "Your Google Analytics tracking ID"
+  disqus = "470772345"
+  # CSS name for highlight.js
+  highlightjs = "androidstudio"
+  highlightjs_extra_languages = ["yaml"]
+  dateFormat = "02 Jan 2006, 15:04"
+  custom_css = ["css/my.css"]
+  custom_js = ["js/my.js"]
+
+[menu]
+  # Shown in the side menu.
+  [[menu.main]]
+    name = "Home"
+    pre = "<i class='fa fa-home fa-fw'></i>"
+    weight = 1
+    identifier = "home"
+    url = "/"
+  [[menu.main]]
+    name = "Posts"
+    pre = "<i class='fa fa-list fa-fw'></i>"
+    weight = 2
+    identifier = "post"
+    url = "/post/"
+  [[menu.main]]
+    name = "Topics"
+    pre = "<i class='fa fa-folder fa-fw'></i>"
+    weight = 3
+    url = "/topics/"
+  [[menu.main]]
+    name = "Tags"
+    pre = "<i class='fa fa-tags fa-fw'></i>"
+    weight = 4
+    url = "/tags/"
+  [[menu.main]]
+    name = "Contact"
+    pre = "<i class='fa fa-phone fa-fw'></i>"
+    weight = 5
+    url = "/contact/"
+  
+
+
+[social]
+  # Link your social networking accouns to the side menu
+  # by entering your username or ID.
+  email = "1832656473@qq.com"
+  weibo = "5954877907"
+  twitter = "*"
+  github = "470772345"

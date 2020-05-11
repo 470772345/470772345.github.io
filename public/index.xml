@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>470772345&#39;s blog</title>
+    <link>https://ohohhh.github.io/</link>
+    <description>Recent content on 470772345&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 12 May 2020 00:14:56 +0800</lastBuildDate>
+    
+	<atom:link href="https://ohohhh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My_first_blog</title>
+      <link>https://ohohhh.github.io/post/my_first_blog/</link>
+      <pubDate>Tue, 12 May 2020 00:14:56 +0800</pubDate>
+      
+      <guid>https://ohohhh.github.io/post/my_first_blog/</guid>
+      <description>你好世界 你好 前端仔</description>
+    </item>
+    
+  </channel>
+</rss>

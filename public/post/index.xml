@@ -1,33 +1,48 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 470772345&#39;s blog</title>
+    <title>Posts on Icarus</title>
     <link>https://470772345.github.io/post/</link>
-    <description>Recent content in Posts on 470772345&#39;s blog</description>
+    <description>Recent content in Posts on Icarus</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 12 May 2020 00:24:31 +0800</lastBuildDate>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 May 2020 10:28:42 +0800</lastBuildDate>
     
 	<atom:link href="https://470772345.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>NewBlog</title>
-      <link>https://470772345.github.io/post/newblog/</link>
+      <title>3</title>
+      <link>https://470772345.github.io/2020/05/12/3/</link>
+      <pubDate>Tue, 12 May 2020 10:28:42 +0800</pubDate>
+      
+      <guid>https://470772345.github.io/2020/05/12/3/</guid>
+      <description>第三个博客 你好 前端仔 </description>
+    </item>
+    
+    <item>
+      <title>都2019了,你还在使用jQuery吗?</title>
+      <link>https://470772345.github.io/2020/05/12/%E9%83%BD2019%E4%BA%86%E4%BD%A0%E8%BF%98%E5%9C%A8%E4%BD%BF%E7%94%A8jquery%E5%90%97/</link>
       <pubDate>Tue, 12 May 2020 00:24:31 +0800</pubDate>
       
-      <guid>https://470772345.github.io/post/newblog/</guid>
-      <description>第二个bolg 第二个</description>
+      <guid>https://470772345.github.io/2020/05/12/%E9%83%BD2019%E4%BA%86%E4%BD%A0%E8%BF%98%E5%9C%A8%E4%BD%BF%E7%94%A8jquery%E5%90%97/</guid>
+      <description>都2019了,你还在使用jQuery吗??? BTW,出来打工卖身,公司的老系统,安排你来维护,你还是要维护,谁让你是无处不能的程序猿呢(哈哈哈,先吹一波~)
+所以先来分析一波当前的情况. 其实做加功能什么的还好说,这次是把项目中的jQuery的版本升级,v1.8.2升级到2.0+,因为上级说会安全点.好吧,拿项目是怎么样的呢, 系统采用 Bootstrap + jQuery 搭建开发的后台管理系统,涉及页面100多个.我一个人升级.所用时间要尽量的短.
+ 框架升级大概会涉及主要问题:  涉及页面很多,但有些可以用全局替换,有些因语法差异大,不能一步到位 语法调整,事件弃用,这个要注意替换的方法会不会对之前逻辑业务有影响 UI框架有变,到时页面混乱,还好这次没有遇到   老系统的业务,也就看过几个页面.完全可以说是完全不了解,没有接触过来形容. 那怎么快速了解大概业务和相关模块功能呢??? 而且我还要统计页面的出错情况,毕竟升级后,影响程度有3种,1.当前页面大多被影响2.当前页面少数被影响3.当前页面无影响
+放大招了~ 直接下载工具,制作思维导图来记录,在制作的过程还可以了解哪些模块以及功能.
+如图(部分截图):从系统出发,记录每一个子模块.记录出错,能大概推断出原因的写出原因
+工具我使用是xmind.
+以下是我遇到一些问题
+判断浏览器类型 兼容 function userBrowser(){ var browserName=navigator.userAgent.toLowerCase(); if(/msie/i.test(browserName) &amp;amp;&amp;amp; !/opera/.test(browserName)){ alert(&amp;quot;IE&amp;quot;); return ; }else if(/firefox/i.test(browserName)){ alert(&amp;quot;Firefox&amp;quot;); return ; }else if(/chrome/i.test(browserName) &amp;amp;&amp;amp; /webkit/i.test(browserName) &amp;amp;&amp;amp; /mozilla/i.test(browserName)){ alert(&amp;quot;Chrome&amp;quot;); return ; }else if(/opera/i.test(browserName)){ alert(&amp;quot;Opera&amp;quot;); return ; }else if(/webkit/i.test(browserName) &amp;amp;&amp;amp;!(/chrome/i.test(browserName) &amp;amp;&amp;amp; /webkit/i.test(browserName) &amp;amp;&amp;amp; /mozilla/i.test(browserName))){ alert(&amp;quot;Safari&amp;quot;); return ; }else{ alert(&amp;quot;unKnow&amp;quot;); } } 判断浏览器版本 var br=navigator.</description>
     </item>
     
     <item>
       <title>My_first_blog</title>
-      <link>https://470772345.github.io/post/my_first_blog/</link>
+      <link>https://470772345.github.io/2020/05/12/my_first_blog/</link>
       <pubDate>Tue, 12 May 2020 00:14:56 +0800</pubDate>
       
-      <guid>https://470772345.github.io/post/my_first_blog/</guid>
-      <description>你好世界 你好 前端仔</description>
+      <guid>https://470772345.github.io/2020/05/12/my_first_blog/</guid>
+      <description>你好世界 你好 前端仔 </description>
     </item>
     
   </channel>

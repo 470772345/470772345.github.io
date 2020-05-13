@@ -21,7 +21,11 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="My_first_blog" />
-<meta property="og:description" content="你好世界 你好 前端仔 " />
+<meta property="og:description" content="1. TCP服务搭建 1.1 socket  先来粗略了解下socket
+ 套接字（socket）是一个抽象层，应用程序可以通过它发送或接收数据，可对其进行像对文件一样的打开、读写和关闭等操作。套接字允许应用程序将I/O插入到网络中，并与网络中的其他应用程序进行通信。网络套接字是IP地址与端口的组合。 (摘自百度百科)
+socket用于在两个基于TCP/IP协议的应用程序之间相互通信.最早出现在UNIX系统中,是UNIX系统主要的信息传递方式.在windows系统中，socket称为winsock.
+两种形式的socket：流式套接字,对应与TCP协议. 数据报套接字,对应与UDP协议.
+2.创建TCP服务端 server.js(服务端) const net = require(&quot;net&quot;);const sever = net.createServer();// const clients = [];const users = [];const types = require(&quot;./types&quot;);sever.on(&quot;connection&quot;, clientSocket =&gt; {console.log(&quot;有连接进来,请注意```&quot;);// clients.push(clientSocket)clientSocket.on(&quot;data&quot;, data =&gt; {console.log(&quot;监听data事件,有人说:&quot;, data.toString());data = JSON.parse(data.toString().trim());switch (data.type) {case types.login:if (users.find(item =&gt; item.nickName === data.nickName)) {return clientSocket.write(JSON.stringify({type: types.login,success: false,message: &quot;昵称已存在&quot;}));}clientSocket." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://470772345.github.io/2020/05/12/my_first_blog/" />
 <meta property="article:published_time" content="2020-05-12T00:14:56+08:00" />
@@ -29,17 +33,25 @@
 
     
     <meta itemprop="name" content="My_first_blog">
-<meta itemprop="description" content="你好世界 你好 前端仔 ">
+<meta itemprop="description" content="1. TCP服务搭建 1.1 socket  先来粗略了解下socket
+ 套接字（socket）是一个抽象层，应用程序可以通过它发送或接收数据，可对其进行像对文件一样的打开、读写和关闭等操作。套接字允许应用程序将I/O插入到网络中，并与网络中的其他应用程序进行通信。网络套接字是IP地址与端口的组合。 (摘自百度百科)
+socket用于在两个基于TCP/IP协议的应用程序之间相互通信.最早出现在UNIX系统中,是UNIX系统主要的信息传递方式.在windows系统中，socket称为winsock.
+两种形式的socket：流式套接字,对应与TCP协议. 数据报套接字,对应与UDP协议.
+2.创建TCP服务端 server.js(服务端) const net = require(&quot;net&quot;);const sever = net.createServer();// const clients = [];const users = [];const types = require(&quot;./types&quot;);sever.on(&quot;connection&quot;, clientSocket =&gt; {console.log(&quot;有连接进来,请注意```&quot;);// clients.push(clientSocket)clientSocket.on(&quot;data&quot;, data =&gt; {console.log(&quot;监听data事件,有人说:&quot;, data.toString());data = JSON.parse(data.toString().trim());switch (data.type) {case types.login:if (users.find(item =&gt; item.nickName === data.nickName)) {return clientSocket.write(JSON.stringify({type: types.login,success: false,message: &quot;昵称已存在&quot;}));}clientSocket.">
 <meta itemprop="datePublished" content="2020-05-12T00:14:56&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-12T00:14:56&#43;08:00" />
-<meta itemprop="wordCount" content="3">
+<meta itemprop="wordCount" content="347">
 
 
 
 <meta itemprop="keywords" content="" />
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="My_first_blog"/>
-<meta name="twitter:description" content="你好世界 你好 前端仔 "/>
+<meta name="twitter:description" content="1. TCP服务搭建 1.1 socket  先来粗略了解下socket
+ 套接字（socket）是一个抽象层，应用程序可以通过它发送或接收数据，可对其进行像对文件一样的打开、读写和关闭等操作。套接字允许应用程序将I/O插入到网络中，并与网络中的其他应用程序进行通信。网络套接字是IP地址与端口的组合。 (摘自百度百科)
+socket用于在两个基于TCP/IP协议的应用程序之间相互通信.最早出现在UNIX系统中,是UNIX系统主要的信息传递方式.在windows系统中，socket称为winsock.
+两种形式的socket：流式套接字,对应与TCP协议. 数据报套接字,对应与UDP协议.
+2.创建TCP服务端 server.js(服务端) const net = require(&quot;net&quot;);const sever = net.createServer();// const clients = [];const users = [];const types = require(&quot;./types&quot;);sever.on(&quot;connection&quot;, clientSocket =&gt; {console.log(&quot;有连接进来,请注意```&quot;);// clients.push(clientSocket)clientSocket.on(&quot;data&quot;, data =&gt; {console.log(&quot;监听data事件,有人说:&quot;, data.toString());data = JSON.parse(data.toString().trim());switch (data.type) {case types.login:if (users.find(item =&gt; item.nickName === data.nickName)) {return clientSocket.write(JSON.stringify({type: types.login,success: false,message: &quot;昵称已存在&quot;}));}clientSocket."/>
 <meta name="twitter:site" content="@spf13"/>
 
     
@@ -57,7 +69,7 @@
 	<header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
-      <a href="https://470772345.github.io/" id="logo">
+      <a href="https://470772345.github.io" id="logo">
           
           <i class="logo" style="background-image: url('https://470772345.github.io/css/images/logo.png')"></i>
           
@@ -104,7 +116,7 @@
               <input type="search" name="q" class="search-form-input" placeholder="">
               <button type="submit" class="search-form-submit">
               </button>
-              <input type="hidden" name="sitesearch" value="https://470772345.github.io/" />
+              <input type="hidden" name="sitesearch" value="https://470772345.github.io" />
          </form>
         </div>
     </div>
@@ -145,7 +157,7 @@
           <td>
           <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
           <input type="search" name="q" class="search-form-input" placeholder="Search">
-          <input type="hidden" name="sitesearch" value="https://470772345.github.io/" />
+          <input type="hidden" name="sitesearch" value="https://470772345.github.io" />
           </form>
         </td>
       </tr>
@@ -273,10 +285,10 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2020-05-12 00:14:56 &#43;0800 CST" itemprop="datePublished">2020-05-12</time>
             &middot;
-            3
+            347
             
             &middot;
-            1
+            2
             
         </div>
         
@@ -287,12 +299,217 @@
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="你好世界">你好世界</h1>
-<h2 id="你好-前端仔">你好 前端仔</h2>
+            <h1 id="1-tcp服务搭建">1. TCP服务搭建</h1>
+<h2 id="11-socket">1.1 socket</h2>
+<blockquote>
+<p>先来粗略了解下socket</p>
+</blockquote>
+<p>套接字（socket）是一个抽象层，应用程序可以通过它发送或接收数据，可对其进行像对文件一样的打开、读写和关闭等操作。套接字允许应用程序将I/O插入到网络中，并与网络中的其他应用程序进行通信。网络套接字是IP地址与端口的组合。 (摘自百度百科)</p>
+<p>socket用于在两个基于TCP/IP协议的应用程序之间相互通信.最早出现在UNIX系统中,是UNIX系统主要的信息传递方式.在windows系统中，socket称为winsock.</p>
+<p>两种形式的socket：流式套接字,对应与TCP协议.
+数据报套接字,对应与UDP协议.</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/8/9/16c75bff2667eae0?w=500&amp;h=337&amp;f=jpeg&amp;s=31083" alt=""></p>
+<h1 id="2创建tcp服务端">2.创建TCP服务端</h1>
+<h3 id="serverjs服务端">server.js(服务端)</h3>
+<pre><code>const net = require(&quot;net&quot;);
+const sever = net.createServer();
+// const clients = [];
+const users = [];
+const types = require(&quot;./types&quot;);
+sever.on(&quot;connection&quot;, clientSocket =&gt; {
+  console.log(&quot;有连接进来,请注意```&quot;);
+  // clients.push(clientSocket)
+  clientSocket.on(&quot;data&quot;, data =&gt; {
+    console.log(&quot;监听data事件,有人说:&quot;, data.toString());
+    data = JSON.parse(data.toString().trim());
+    switch (data.type) {
+      case types.login:
+        if (users.find(item =&gt; item.nickName === data.nickName)) {
+          return clientSocket.write(
+            JSON.stringify({
+              type: types.login,
+              success: false,
+              message: &quot;昵称已存在&quot;
+            })
+          );
+        }
+        clientSocket.nickName = data.nickName;
+        users.push(clientSocket);
+        clientSocket.write(
+          JSON.stringify({
+            type: types.login,
+            success: true,
+            message: &quot;登录成功&quot;,
+            nickName:data.nickName,
+            sumUsers: users.length
+          })
+        );
+        users.forEach(user=&gt;{
+          if(user!==clientSocket){
+            user.write(JSON.stringify({
+              type:types.log,
+              message:`${data,nickName} 进入聊天室,当前在线用户数${user.length}`
+            }))
+          }
+        })
+
+
+        break;
+      // 群聊天
+      case types.broadcast:
+         users.forEach(item =&gt; {
+          item.write(JSON.stringify({
+            type:types.broadcast,
+            message:data.message,
+            nickName:clientSocket.nickName
+          }))
+        })
+        break;
+      // 点对点
+      case types.p2p:
+        const user = users.find(item =&gt; item.nickName === data.nickName)
+        if(!user){
+          return clientSocket.write(JSON.stringify({
+            type:types.p2p,
+            success:false,
+            message:&quot;该用户不存在&quot;
+          }))
+        }
+        console.log('clientSocket.nickName',clientSocket.nickName)
+        user.write(JSON.stringify({
+          type:types.p2p,
+          message:data.message,
+          nickName:clientSocket.nickName,
+          success:true
+        }))
+
+        break;
+      default:
+        break;
+    }
+  });
+  
+  // 离线
+  clientSocket.on(&quot;end&quot;,()=&gt;{
+    console.log(&quot;有用户离线了~~~&quot;)
+    const index =users.findIndex(user =&gt; user.nickName === clientSocket.nickName)
+    if(index !== -1){
+      const offlineUser = users[inde]
+      users.splice(index,1)
+      users.forEach(user=&gt;{
+        if(user!==clientSocket){
+          user.write(JSON.stringify({
+            type:types.log,
+            message:`${offlineUser,nickName} 离开了聊天室,当前在线用户数${user.length}`
+          }))
+        }
+      })
+    }
+  })
+  // clientSocket.write('hello,返回的是buffer,用tostring转一下哦')
+});
+
+sever.listen(2000, () =&gt; {
+  console.log(&quot;server running  127.0.0.1 2000&quot;);
+});
+
+</code></pre><h1 id="3创建客户端">3.创建客户端</h1>
+<h3 id="clientjs客户端">client.js(客户端)</h3>
+<pre><code>const net = require(&quot;net&quot;);
+const types = require(&quot;./types&quot;);
+let nickName = null;
+const client = net.createConnection({
+  host: &quot;127.0.0.1&quot;,
+  port: 2000
+});
+
+client.on(&quot;connect&quot;, () =&gt; {
+  console.log(&quot;连接成功了~~~&quot;);
+  process.stdout.write(&quot;请输入昵称:&quot;);
+
+  // 连接完毕后,可以监听终端的信息,发给服务端
+  process.stdin.on(&quot;data&quot;, data =&gt; {
+    data = data.toString().trim();
+    console.log(&quot;nickName&quot;, nickName);
+    if (!nickName) {
+      client.write(
+        JSON.stringify({
+          type: types.login,
+          nickName: data
+        })
+      );
+    }
+    const matches = /^@(\w+)\s(.+)$/.exec(data);
+    if (matches) {
+      //符合 @xxx xxx  格式
+      return client.write(
+        JSON.stringify({
+          type: types.p2p,
+          nickName: matches[1],
+          message: matches[2]
+        })
+      );
+    }
+    //群聊天
+    client.write(
+      JSON.stringify({
+        type: types.broadcast,
+        message: data
+      })
+    );
+  });
+});
+
+client.on(&quot;data&quot;, data =&gt; {
+  // console.log(&quot;服务端发来的data:::&quot;, data.toString());
+  data = JSON.parse(data.toString().trim());
+  switch (data.type) {
+    case types.login:
+      if (!data.success) {
+        console.log(&quot;登录失败&quot;, `${data.message}`);
+        process.stdout.write(&quot;请输入昵称&quot;);
+      } else {
+        process.stdout.write(&quot;登录成功,当前在线人数:&quot;, data.sumUsers);
+        nickName = data.nickName;
+      }
+      break;
+    case types.broadcast:
+      console.log(`${data.nickName}:${data.message}`);
+      break;
+    case types.p2p:
+      if (!data.success) {
+        return console.log(`发送失败:${data.message}`);
+      }
+      console.log(`${data.nickName}对你说:${data.message}`);
+      break;
+    case types.log:
+      console.log(`${data.message}`);
+      break;
+    default:
+      console.log(&quot;未知消息类型哦~&quot;);
+      break;
+  }
+});
+
+</code></pre><h3 id="typesjs">types.js</h3>
+<pre><code>module.exports = {
+  login: 0,
+  broadcast: 1,
+  p2p: 2,
+  log: 3
+};
+</code></pre><h1 id="总结">总结</h1>
+<ul>
+<li>通过net模块建立TCP服务</li>
+<li>TCP必须建立连接(3次握手)后才能通信</li>
+<li>socket通信模型</li>
+<li>和使用其他node模块(如koa)一样的思路,都是先建立服务(server),指定端口号</li>
+</ul>
+<h2 id="新手一个欢迎指正批评">新手一个,欢迎指正批评~~</h2>
 
         </div>
         <footer class="article-footer">
-    <a data-url="https://470772345.github.io/2020/05/12/my_first_blog/" data-id="2a29b77676bcb68aeee38fe62f56990a" class="article-share-link">
+    <a data-url="https://470772345.github.io/2020/05/12/my_first_blog/" data-id="e370369312af2a9690f4fd040ff6b506" class="article-share-link">
         <i class="fa fa-share"></i>
         
     </a>

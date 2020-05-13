@@ -42,7 +42,11 @@
       <pubDate>Tue, 12 May 2020 00:14:56 +0800</pubDate>
       
       <guid>https://470772345.github.io/2020/05/12/my_first_blog/</guid>
-      <description>你好世界 你好 前端仔 </description>
+      <description>1. TCP服务搭建 1.1 socket  先来粗略了解下socket
+ 套接字（socket）是一个抽象层，应用程序可以通过它发送或接收数据，可对其进行像对文件一样的打开、读写和关闭等操作。套接字允许应用程序将I/O插入到网络中，并与网络中的其他应用程序进行通信。网络套接字是IP地址与端口的组合。 (摘自百度百科)
+socket用于在两个基于TCP/IP协议的应用程序之间相互通信.最早出现在UNIX系统中,是UNIX系统主要的信息传递方式.在windows系统中，socket称为winsock.
+两种形式的socket：流式套接字,对应与TCP协议. 数据报套接字,对应与UDP协议.
+2.创建TCP服务端 server.js(服务端) const net = require(&amp;quot;net&amp;quot;);const sever = net.createServer();// const clients = [];const users = [];const types = require(&amp;quot;./types&amp;quot;);sever.on(&amp;quot;connection&amp;quot;, clientSocket =&amp;gt; {console.log(&amp;quot;有连接进来,请注意```&amp;quot;);// clients.push(clientSocket)clientSocket.on(&amp;quot;data&amp;quot;, data =&amp;gt; {console.log(&amp;quot;监听data事件,有人说:&amp;quot;, data.toString());data = JSON.parse(data.toString().trim());switch (data.type) {case types.login:if (users.find(item =&amp;gt; item.nickName === data.nickName)) {return clientSocket.write(JSON.stringify({type: types.login,success: false,message: &amp;quot;昵称已存在&amp;quot;}));}clientSocket.</description>
     </item>
     
   </channel>
